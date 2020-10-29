@@ -7,5 +7,13 @@ package string
 //   Reverse("alphabet") => "tebahpla"
 //
 func Reverse(word string) string {
-	return ""
+	w := []rune(word)
+
+	l := len(w)
+
+	for i, j := 0, l-1; i < l/2; i, j = i+1, j-1 {
+		w[i], w[j] = w[j], w[i]
+	}
+
+	return string(w)
 }
