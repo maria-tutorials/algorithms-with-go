@@ -25,5 +25,8 @@ package fib
 //   Fibonacci(14) => 377
 //
 func Fibonacci(n int) int {
-	return 0
+	if n == 0 || n == 1 {
+		return n
+	}
+	return Fibonacci(n-1) + Fibonacci(n-2)
 }
